@@ -19,14 +19,14 @@ namespace Prac6
         protected void Session_Start(object sender, EventArgs e)
         {
             Application.Lock();
-            Application["CurrentUsers"] = System.Convert.ToInt32(Application["CurrentUsers"]) + 1;
+            Application["CurrentUsers"] = (int)(Application["CurrentUsers"]) + 1;
             Application.UnLock();
         }
 
         void Session_OnEnd(object Sender, EventArgs E)
         {
             Application.Lock();
-            Application["CurrentUsers"] = System.Convert.ToInt32(Application["CurrentUsers"]) - 1;
+            Application["CurrentUsers"] = (int)(Application["CurrentUsers"]) - 1;
             Application.UnLock();
         }
 

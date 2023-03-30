@@ -13,7 +13,7 @@ namespace Prac6
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblVisitorNum.Text = Convert.ToInt32(Application["CurrentUsers"]).ToString();  
+            lblVisitorNum.Text = (int)(Application["CurrentUsers"]).ToString();  
             lblTime.Text = DateTime.Now.ToString();
 
 
