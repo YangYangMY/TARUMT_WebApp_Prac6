@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Prac6
+{
+    public partial class Default : System.Web.UI.Page
+    {
+        String _str;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            this.LabelShowString.Text = this._str;
+
+            this.LabelShowStringAsSessionState.Text = (String)this.Session["str"];
+        }
+
+
+        protected void SubmitString_Click(object sender, EventArgs e)
+        {
+            this._str = this.TextBox1.Text;
+            this.Session["str"] = this.TextBox1.Text;
+            this.LabelShowString.Text = this._str;
+
+            this.LabelShowStringAsSessionState.Text =
+                (String)this.Session["str"];
+
+
+        }
+    }
+}
