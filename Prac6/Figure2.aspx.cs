@@ -22,7 +22,7 @@ namespace Prac6
                 Session["SelectedCss"] = "Standard.css";
             }
 
-            this._num = Convert.ToInt32(Application["CurrentUsers"]);
+            this._num = (int)(Application["CurrentUsers"]);
             lblVisitorNum.Text = _num.ToString();
             lblTime.Text = DateTime.Now.ToString();
         }
