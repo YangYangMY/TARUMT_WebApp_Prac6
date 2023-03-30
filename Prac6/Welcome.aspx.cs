@@ -18,7 +18,7 @@ namespace Prac6
                 lblWelcome.Text = "Welcome to BAIT2113 Web Application Development Website";
                 lblCache.Text = "This page is cached on " + DateTime.Now.ToString();
             }
-            else
+            else if (Request.QueryString["flanguage"] == "1")
             {
                 lblName.Text = "こんにちは、" + Request.QueryString["fname"];
                 lblProgramme.Text = " から " + Request.QueryString["fprogram"];
